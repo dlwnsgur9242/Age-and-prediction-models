@@ -4,7 +4,18 @@
 <br>
 <br>
 
-# 블로그 포스팅(자세한)
+# Tech Stack
+<pre>
+conda 23.7.4
+jupyter notebook 6.5.4
+colab
+kaggle
+</pre>
+<br>
+<br>
+<br>
+
+## 블로그 포스팅(자세한 내용)
 https://junlove-dam1ary.tistory.com/103
 <br>
 <br>
