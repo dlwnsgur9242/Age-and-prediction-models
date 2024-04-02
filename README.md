@@ -70,25 +70,25 @@ class UtkFaceDataGenerator():
 <br>
 <br>
 <pre>
-import matplotlib.pyplot as plt
-
-# 데이터 제너레이터 생성
-data_generator = UtkFaceDataGenerator(df)
-
-# 학습 데이터 생성
-train_idx, valid_idx, test_idx = data_generator.generate_split_indexes()
-train_images, train_labels = next(data_generator.generate_images(train_idx, is_training=True, batch_size=16))
-
-# 생성된 이미지 출력
-plt.figure(figsize=(10, 10))
-for i in range(12):
-    plt.subplot(4, 3, i+1)
-    plt.imshow(train_images[i])
-    plt.title(f"Age: {train_labels[0][i] * data_generator.max_age}, Race: {np.argmax(train_labels[1][i])}, Gender: {np.argmax(train_labels[2][i])}")
-    plt.axis('off')
-
-plt.tight_layout()
-plt.show()
+  import matplotlib.pyplot as plt
+  
+  ### 데이터 제너레이터 생성
+  data_generator = UtkFaceDataGenerator(df)
+  
+  ### 학습 데이터 생성
+  train_idx, valid_idx, test_idx = data_generator.generate_split_indexes()
+  train_images, train_labels = next(data_generator.generate_images(train_idx, is_training=True, batch_size=16))
+  
+  ### 생성된 이미지 출력
+  plt.figure(figsize=(10, 10))
+  for i in range(12):
+      plt.subplot(4, 3, i+1)
+      plt.imshow(train_images[i])
+      plt.title(f"Age: {train_labels[0][i] * data_generator.max_age}, Race: {np.argmax(train_labels[1][i])}, Gender: {np.argmax(train_labels[2][i])}")
+      plt.axis('off')
+  
+  plt.tight_layout()
+  plt.show()
 </pre>
 <br>
 <br>
